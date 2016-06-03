@@ -8,7 +8,7 @@ Goal
 * priority based `update`
 * __[LOD (Animation)](https://youtu.be/X3htj7jUBeg?t=3m16s)__
 
-Sample
+EXample
 ----
 __the `slowcow` object__
 ```cpp
