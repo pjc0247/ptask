@@ -55,10 +55,10 @@ __without PTask__<br>
 	addChild(node);
 }
  ```
-__Low Priority__ : 이 레벨의 오브젝트는 프레임을 무조건 떨어트리지 않는 범위에서 스케쥴링된다.<br>
+__Low Priority__ : Objects with priority are scheduled in a range that does not unconditionally drop the frame.<br>
 ![p](img/ptask1.gif)<br>
 <br><br>
-__Normal Priority__ : 평소엔 프레임이 우선시되지만, 너무 오래 정체되었을 경우 강제로 우선순위를 높인다. 주기적인 프레임 감소 가능성이 있음.<br>
+__Normal Priority__ : Prefers the framerate, but if they are stuck for too long, the priority is increased. (Possible to reduce framerates.)<br>
 ![p](img/ptask2.gif)<br>
 <br>
 * The big ball is scheduled by cocos2d-x, not a ptask. You can estimate the framerate with it.
@@ -76,7 +76,7 @@ This prevents frame-drop caused by instantiating tons of objects at once.
 ptask::_for(
     1, 100,
     [](int i) {
-        // for의 본문
+        // SOME HEAVY TASKS
     });
 ```
 
